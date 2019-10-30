@@ -1,0 +1,92 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Plotly.js -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+	<h1>Data visualization by AA04</h1>
+	<hr>
+	<h2>Starting chart by AA04</h2>
+
+	<!-- Plotly chart will be drawn inside this DIV -->
+	<div id="myDiv" style="width: 500px;height: 400px"></div>
+
+	<script>
+		<!-- JAVASCRIPT CODE GOES HERE -->
+
+		var Trace1 = 
+		{
+			x:[1,2,3,4,5],
+			y:[10,15,13,17,16],
+			mode: 'lines',
+			name: 'Solid',
+			marker: {
+				color:'rgb(219,64,82)',
+				dash:'solid',
+				size:12
+			}
+		};
+		var Trace2 ={ 
+			x:[1,2,3,4,5],
+			y:[16,5,11,9,20],
+			mode:'lines',
+			name: 'dot',
+			line: {
+				color:'rgb(55,128,10)',
+				dash:'dot',
+				width:4
+			}
+
+		};
+		var Trace3 = {
+			x:[1,2,3,4],
+			y:[12,9,15,12],
+			mode :'lines',
+			name : 'dashdot',
+			marker: {
+				color:'rgb(30,25,200)',
+				size:8
+			},
+			line:{
+				color:'rgb(120,70,28)',
+				dash:'dashdot',
+				width:4
+			}
+		}
+
+
+
+
+		var data = [Trace1, Trace2, Trace3];
+
+		var layout = {
+			title:'Line and Scatter charts of AA04',
+			autosize: false,
+			width: 600,
+			height: 450,
+			margin: {
+				l: 50,  // left
+				r: 50,  // right
+				b: 100, // bottom 
+				t: 100, // top
+				pad: 40  // padding
+			},
+			xaxis:{
+				title:'x-axis title'
+			},
+			yaxis:{
+				title:'y-axis title'
+			},
+			paper_bgcolor: '#ececec',
+	  		plot_bgcolor: '#ffffff' //'#rrggbb'
+		};
+
+		Plotly.newPlot('myDiv',data, layout);
+
+		
+
+	</script>
+</body>
+</html>	
+
